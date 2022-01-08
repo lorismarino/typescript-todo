@@ -3,6 +3,13 @@ body {
   height: 100%;
 }
 
+body {
+  color: var(--black);
+  font-family: Inter, sans-serif;
+  font-size: rem(16);
+  font-weight: 400;
+}
+
 .page {
   display: flex;
   flex-direction: column;

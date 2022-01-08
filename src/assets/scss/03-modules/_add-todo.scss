@@ -1,0 +1,16 @@
+.add-todo {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(50);
+
+  input {
+    border: 1px solid var(--light-grey);
+    border-radius: rem(5);
+    font-size: rem(26);
+    font-weight: 600;
+    height: 60px;
+    padding: rem(10);
+    text-align: center;
+    width: 400px;
+  }
+}

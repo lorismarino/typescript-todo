@@ -7,5 +7,6 @@
 // convert px to rem (base 16px)
 @function rem($size) {
   $rem-size: math.div($size, 16);
+
   @return #{$rem-size}rem;
 }

@@ -1,1 +1,3 @@
-import 'bootstrap' // import Bootstrap (not required)
+import Todo from './components/Todo'
+const TodoInstance = new Todo()
+TodoInstance.initialize()
