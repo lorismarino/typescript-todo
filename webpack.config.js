@@ -1,6 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 const RemovePlugin = require('remove-files-webpack-plugin')
@@ -61,14 +61,7 @@ module.exports = (env, options) => {
         },
         {
           test: /\.s[ac]ss$/i,
-          use: [
-            options.mode === 'production'
-              ? MiniCssExtractPlugin.loader
-              : 'style-loader',
-            'css-loader',
-            'postcss-loader',
-            'sass-loader',
-          ],
+          use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
         },
       ],
     },
@@ -95,9 +88,9 @@ module.exports = (env, options) => {
       // new CopyPlugin({
       //   patterns: [{ from: 'src/assets/fonts', to: 'assets/fonts' }],
       // }),
-      new MiniCssExtractPlugin({
-        filename: 'assets/css/bundle.[contenthash].css',
-      }),
+      // new MiniCssExtractPlugin({
+      //   filename: 'assets/css/bundle.[contenthash].css',
+      // }),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: './src/templates/pages/index.html.twig',
