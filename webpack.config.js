@@ -5,7 +5,7 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 const RemovePlugin = require('remove-files-webpack-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
-// const CopyPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 // const glob = require('glob').sync
 // const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
@@ -85,9 +85,9 @@ module.exports = (env, options) => {
     },
     plugins: [
       // new SpriteLoaderPlugin(),
-      // new CopyPlugin({
-      //   patterns: [{ from: 'src/assets/fonts', to: 'assets/fonts' }],
-      // }),
+      new CopyPlugin({
+        patterns: [{ from: '.nojekyll', to: '' }],
+      }),
       // new MiniCssExtractPlugin({
       //   filename: 'assets/css/bundle.[contenthash].css',
       // }),
